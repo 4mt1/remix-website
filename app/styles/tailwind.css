@@ -1,6 +1,171 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @config '../../tailwind.config.mjs';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-*: initial;
+  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-fira-sans: Fira Sans, ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: Source Code Pro, ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --text-*: initial;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.333;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.425;
+  --text-base: 1rem;
+  --text-base--line-height: 1.5;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.556;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.556;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 1.333;
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: 1.2;
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: 1.111;
+  --text-5xl: 3rem;
+  --text-5xl--line-height: 1.083;
+  --text-6xl: 4rem;
+  --text-6xl--line-height: 1.0625;
+  --text-7xl: 4.5rem;
+  --text-7xl--line-height: 1.05;
+  --text-8xl: 6rem;
+  --text-8xl--line-height: 1.125;
+  --text-9xl: 8rem;
+  --text-9xl--line-height: 1.125;
+
+  --color-*: initial;
+  --color-current: currentColor;
+  --color-transparent: transparent;
+  --color-inherit: inherit;
+  --color-white: #fff;
+  --color-black: #000;
+
+  --color-gray-50: #f7f7f7;
+  --color-gray-100: #e3e3e3;
+  --color-gray-200: #c8c8c8;
+  --color-gray-300: #a4a4a4;
+  --color-gray-400: #818181;
+  --color-gray-500: #666666;
+  --color-gray-600: #515151;
+  --color-gray-700: #434343;
+  --color-gray-800: #383838;
+  --color-gray-900: #121212;
+
+  --color-red-50: #fef2f3;
+  --color-red-100: #ffe1e3;
+  --color-red-200: #ffc9cd;
+  --color-red-300: #fea3aa;
+  --color-red-400: #fc6d78;
+  --color-red-500: #f44250;
+  --color-red-600: #e12130;
+  --color-red-700: #bd1825;
+  --color-red-800: #9d1722;
+  --color-red-900: #821a22;
+  --color-red-brand: #f44250;
+
+  --color-yellow-50: #fffce8;
+  --color-yellow-100: #fff9c2;
+  --color-yellow-200: #fff087;
+  --color-yellow-300: #ffde44;
+  --color-yellow-400: #fecc1b;
+  --color-yellow-500: #eeb004;
+  --color-yellow-600: #cd8701;
+  --color-yellow-700: #a45f04;
+  --color-yellow-800: #874b0c;
+  --color-yellow-900: #733d10;
+  --color-yellow-brand: #fecc1b;
+
+  --color-green-50: #f2fcf1;
+  --color-green-100: #dffade;
+  --color-green-200: #c1f3bf;
+  --color-green-300: #90e88d;
+  --color-green-400: #6bd968;
+  --color-green-500: #30ba2d;
+  --color-green-600: #229920;
+  --color-green-700: #1d791c;
+  --color-green-800: #1c601b;
+  --color-green-900: #184f18;
+  --color-green-brand: #6bd968;
+
+  --color-aqua-50: #effefc;
+  --color-aqua-100: #cafdf8;
+  --color-aqua-200: #94fbf4;
+  --color-aqua-300: #3defe9;
+  --color-aqua-400: #24dddc;
+  --color-aqua-500: #0cbdc0;
+  --color-aqua-600: #06969b;
+  --color-aqua-700: #0a767b;
+  --color-aqua-800: #0d5e62;
+  --color-aqua-900: #104d51;
+  --color-aqua-brand: #3defe9;
+
+  --color-blue-50: #eef7ff;
+  --color-blue-100: #d9edff;
+  --color-blue-200: #bce0ff;
+  --color-blue-300: #8ecdff;
+  --color-blue-400: #59b0ff;
+  --color-blue-500: #3992ff;
+  --color-blue-600: #1b6ef5;
+  --color-blue-700: #1458e1;
+  --color-blue-800: #1747b6;
+  --color-blue-900: #193f8f;
+  --color-blue-brand: #3992ff;
+
+  --color-pink-50: #fff4ff;
+  --color-pink-100: #fde8ff;
+  --color-pink-200: #fbd1fd;
+  --color-pink-300: #faadfa;
+  --color-pink-400: #f77bf6;
+  --color-pink-500: #ec49e9;
+  --color-pink-600: #d83bd2;
+  --color-pink-700: #ac1fa3;
+  --color-pink-800: #8d1b85;
+  --color-pink-900: #731c6b;
+  --color-pink-brand: #d83bd2;
+
+  --breakpoint-2xs: 320px;
+  --breakpoint-xs: 480px;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  @media (width >= theme(--breakpoint-sm)) {
+    padding-inline: 1.5rem;
+  }
+  @media (width >= theme(--breakpoint-md)) {
+    padding-inline: 2rem;
+  }
+  @media (width >= theme(--breakpoint-lg)) {
+    padding-inline: 2.5rem;
+  }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,

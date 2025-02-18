@@ -41,7 +41,7 @@
       left: 0;
       top: 0;
       width: 100%;
-      background: theme("colors.green.500");
+      background: var(--color-green-500);
       opacity: 0.125;
       z-index: -1; /* Required for data-highlight to render behind code */
     }

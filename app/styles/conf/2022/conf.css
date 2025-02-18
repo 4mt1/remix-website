@@ -3,12 +3,12 @@
 .__layout {
   background-image: linear-gradient(
     180deg,
-    theme(colors.blue.800) 0px,
-    theme(colors.blue.800) 20px,
-    theme(colors.blue.700) 350px,
-    theme(colors.blue.700) 1000px,
-    theme(colors.blue.800) 2000px,
-    theme(colors.blue.900) 3000px
+    var(--color-blue-800) 0px,
+    var(--color-blue-800) 20px,
+    var(--color-blue-700) 350px,
+    var(--color-blue-700) 1000px,
+    var(--color-blue-800) 2000px,
+    var(--color-blue-900) 3000px
   );
 }
 .__hero {
@@ -81,10 +81,10 @@
   position: relative;
   background-image: linear-gradient(
     180deg,
-    theme(colors.blue.900) 0px,
-    theme(colors.blue.800) 200px,
-    theme(colors.blue.800) 200px,
-    theme(colors.blue.700) 100%
+    var(--color-blue-900) 0px,
+    var(--color-blue-800) 200px,
+    var(--color-blue-800) 200px,
+    var(--color-blue-700) 100%
   );
 
   &::before {
@@ -104,11 +104,11 @@
 }
 
 .__speaker-img {
-  border: 1px solid theme("colors.blue.brand");
+  border: 1px solid var(--color-blue-brand);
 }
 
 .__speaker-link:hover .__speaker-img {
-  border-color: theme("colors.pink.brand");
+  border-color: var(--color-pink-brand);
 }
 
 .animated-remix-conf-logo .remix {

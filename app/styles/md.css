@@ -1,40 +1,40 @@
 @reference './tailwind.css';
 
 :root {
-  --base00: theme("colors.gray.50");
-  --base01: theme("colors.gray.200");
-  --base02: theme("colors.gray.300");
-  --base03: theme("colors.gray.500");
-  --base04: theme("colors.gray.500");
-  --base05: theme("colors.gray.600");
-  --base06: theme("colors.gray.700");
-  --base07: theme("colors.gray.800");
-  --base08: theme("colors.red.700");
-  --base09: theme("colors.pink.700");
-  --base0A: theme("colors.blue.700");
-  --base0B: theme("colors.green.700");
-  --base0C: theme("colors.aqua.700");
-  --base0D: theme("colors.blue.700");
-  --base0E: theme("colors.pink.700");
-  --base0F: theme("colors.gray.700");
+  --base00: var(--color-gray-50);
+  --base01: var(--color-gray-200);
+  --base02: var(--color-gray-300);
+  --base03: var(--color-gray-500);
+  --base04: var(--color-gray-500);
+  --base05: var(--color-gray-600);
+  --base06: var(--color-gray-700);
+  --base07: var(--color-gray-800);
+  --base08: var(--color-red-700);
+  --base09: var(--color-pink-700);
+  --base0A: var(--color-blue-700);
+  --base0B: var(--color-green-700);
+  --base0C: var(--color-aqua-700);
+  --base0D: var(--color-blue-700);
+  --base0E: var(--color-pink-700);
+  --base0F: var(--color-gray-700);
 
   &:where(.dark) {
-    --base00: theme("colors.gray.800");
-    --base01: theme("colors.gray.700");
-    --base02: theme("colors.gray.600");
-    --base03: theme("colors.gray.400");
-    --base04: theme("colors.gray.400");
-    --base05: theme("colors.gray.200");
-    --base06: theme("colors.gray.200");
-    --base07: theme("colors.gray.100");
-    --base08: theme("colors.red.300");
-    --base09: theme("colors.pink.400");
-    --base0A: theme("colors.blue.300");
-    --base0B: theme("colors.yellow.brand");
-    --base0C: theme("colors.aqua.300");
-    --base0D: theme("colors.blue.300");
-    --base0E: theme("colors.pink.300");
-    --base0F: theme("colors.gray.300");
+    --base00: var(--color-gray-800);
+    --base01: var(--color-gray-700);
+    --base02: var(--color-gray-600);
+    --base03: var(--color-gray-400);
+    --base04: var(--color-gray-400);
+    --base05: var(--color-gray-200);
+    --base06: var(--color-gray-200);
+    --base07: var(--color-gray-100);
+    --base08: var(--color-red-300);
+    --base09: var(--color-pink-400);
+    --base0A: var(--color-blue-300);
+    --base0B: var(--color-yellow-brand);
+    --base0C: var(--color-aqua-300);
+    --base0D: var(--color-blue-300);
+    --base0E: var(--color-pink-300);
+    --base0F: var(--color-gray-300);
   }
 }
 

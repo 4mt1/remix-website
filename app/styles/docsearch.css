@@ -26,10 +26,10 @@
 .DocSearch-Button {
   @apply ml-0 h-10 bg-gray-100 px-3 hover:bg-gray-200 hover:shadow-none focus:bg-gray-200 focus-visible:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus-visible:bg-gray-700;
 
-  @media screen and (min-width: theme(screens.lg)) {
+  @media screen and (min-width: theme(--breakpoint-lg)) {
     width: 100%;
   }
-  @media not screen and (min-width: theme(screens.lg)) {
+  @media not screen and (min-width: theme(--breakpoint-lg)) {
     @apply w-10 place-content-center px-0;
     .DocSearch-Button-Keys,
     .DocSearch-Button-Placeholder {

@@ -86,15 +86,15 @@
   }
 
   & .__fx-colors {
-    background-image: linear-gradient(
+    background: linear-gradient(
       90deg,
-      rgb(57 146 255) 0%,
-      rgb(216 59 210) 16.67%,
-      rgb(244 66 80) 33.33%,
-      rgb(254 204 27) 50%,
-      rgb(244 66 80) 66.67%,
-      rgb(216 59 210) 82.33%,
-      rgb(57 146 255) 100%
+      var(--color-blue-brand) 0%,
+      var(--color-pink-brand) 16.67%,
+      var(--color-red-brand) 33.33%,
+      var(--color-yellow-brand) 50%,
+      var(--color-red-brand) 66.67%,
+      var(--color-pink-brand) 82.33%,
+      var(--color-blue-brand) 100%
     );
     mix-blend-mode: soft-light;
     opacity: 0.8;

@@ -1,20 +1,20 @@
 @reference './tailwind.css';
 
 :root {
-  --base00: theme("colors.gray.800");
-  --base01: theme("colors.gray.700");
-  --base02: theme("colors.gray.600");
-  --base03: theme("colors.gray.500");
-  --base04: theme("colors.gray.400");
-  --base05: theme("colors.gray.300");
-  --base06: theme("colors.gray.200");
-  --base07: theme("colors.gray.100");
-  --base08: theme("colors.blue.300");
-  --base09: theme("colors.pink.brand");
-  --base0A: theme("colors.yellow.brand");
-  --base0B: theme("colors.green.400");
-  --base0C: theme("colors.aqua.brand");
-  --base0D: theme("colors.blue.400");
-  --base0E: theme("colors.pink.400");
-  --base0F: theme("colors.gray.200");
+  --base00: var(--color-gray-800);
+  --base01: var(--color-gray-700);
+  --base02: var(--color-gray-600);
+  --base03: var(--color-gray-500);
+  --base04: var(--color-gray-400);
+  --base05: var(--color-gray-300);
+  --base06: var(--color-gray-200);
+  --base07: var(--color-gray-100);
+  --base08: var(--color-blue-300);
+  --base09: var(--color-pink-brand);
+  --base0A: var(--color-yellow-brand);
+  --base0B: var(--color-green-400);
+  --base0C: var(--color-aqua-brand);
+  --base0D: var(--color-blue-400);
+  --base0E: var(--color-pink-400);
+  --base0F: var(--color-gray-200);
 }
