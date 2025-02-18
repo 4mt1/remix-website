@@ -1,3 +1,5 @@
+@reference './tailwind.css';
+
 /*****************************************************************************/
 /* syntax highlighting */
 :root {
@@ -72,7 +74,7 @@
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   grid-area: main;
-  @apply min-w-0 flex-auto break-words text-base leading-normal text-gray-700 dark:text-gray-300;
+  @apply min-w-0 flex-auto text-base leading-normal break-words text-gray-700 dark:text-gray-300;
 
   & > :first-child {
     @apply mt-0;
@@ -86,7 +88,7 @@
   /* general text styles */
 
   & p {
-    @apply mb-4 mt-0;
+    @apply mt-0 mb-4;
   }
 
   & strong {
@@ -165,7 +167,7 @@
   }
 
   & dl {
-    @apply mb-4 mt-0 p-0;
+    @apply mt-0 mb-4 p-0;
 
     & dt {
       @apply mt-4 p-0 text-base font-semibold italic;
@@ -190,7 +192,7 @@
   /*****************************************************************************/
   /* headings */
   & :is(h1, h2, h3, h4, h5, h6) {
-    @apply mb-4 mt-8;
+    @apply mt-8 mb-4;
   }
 
   &:not(docs-card) > :is(h1, h2, h3, h4, h5, h6) {
@@ -198,7 +200,7 @@
   }
 
   & h1 {
-    @apply my-8 text-2xl font-black xs:text-3xl sm:text-4xl md:text-5xl;
+    @apply xs:text-3xl my-8 text-2xl font-black sm:text-4xl md:text-5xl;
   }
 
   & h2 {
@@ -230,7 +232,7 @@
 
     /* only apply these styles for links starting with a hash -- if a header does not start with a hash, it was generated from HTML, not markdown headers */
     & a[href^="#"] {
-      @apply absolute -left-6 -right-0 top-0 z-10 flex h-full items-center leading-none;
+      @apply absolute top-0 -right-0 -left-6 z-10 flex h-full items-center leading-none;
     }
 
     &:hover a[href^="#"],
@@ -239,7 +241,7 @@
     }
 
     & .icon-link {
-      @apply flex h-full items-center align-middle text-blue-brand;
+      @apply text-blue-brand flex h-full items-center align-middle;
     }
 
     & a .icon-link::before {
@@ -262,7 +264,7 @@
   /*****************************************************************************/
   /* details / summary */
   & details {
-    @apply mb-4 mt-0 block;
+    @apply mt-0 mb-4 block;
   }
 
   & summary {
@@ -306,7 +308,7 @@
   }
 
   & pre > code {
-    @apply m-0 whitespace-pre break-normal border-0 bg-transparent p-0;
+    @apply m-0 border-0 bg-transparent p-0 break-normal whitespace-pre;
   }
 
   & .codeblock-line {
@@ -314,7 +316,7 @@
   }
 
   & :not(pre) > code {
-    @apply rounded bg-gray-100/50 px-1.5 pb-0.5 pt-px text-sm text-gray-700 dark:bg-gray-800/50;
+    @apply rounded bg-gray-100/50 px-1.5 pt-px pb-0.5 text-sm text-gray-700 dark:bg-gray-800/50;
   }
 
   /* Undo the .md-prose code and .md-prose kbd color above for links. */
@@ -350,7 +352,7 @@
   }
 
   & [data-code-block-copy] {
-    @apply absolute right-4 top-[1.125rem] h-5 w-5 cursor-pointer bg-gray-500 opacity-0 hover:bg-black dark:bg-gray-400 dark:hover:bg-gray-100;
+    @apply absolute top-[1.125rem] right-4 h-5 w-5 cursor-pointer bg-gray-500 opacity-0 hover:bg-black dark:bg-gray-400 dark:hover:bg-gray-100;
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='9' y='9' width='13' height='13' rx='2' ry='2' vector-effect='non-scaling-stroke'%3E%3C/rect%3E%3Cpath d='M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1' vector-effect='non-scaling-stroke'%3E%3C/path%3E%3C/svg%3E");
     mask-size: cover;
   }
@@ -420,7 +422,7 @@
   }
 
   & pre[data-filename]::after {
-    @apply absolute left-[1.125rem] top-5 h-4 w-4 bg-gray-400 dark:bg-gray-500;
+    @apply absolute top-5 left-[1.125rem] h-4 w-4 bg-gray-400 dark:bg-gray-500;
     content: "";
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z' vector-effect='non-scaling-stroke'%3E%3C/path%3E%3Cpolyline points='13 2 13 9 20 9' vector-effect='non-scaling-stroke'%3E%3C/polyline%3E%3C/svg%3E");
     mask-size: cover;
@@ -428,7 +430,7 @@
 
   & .codeblock-line[data-highlight="true"]::after {
     content: " ";
-    @apply pointer-events-none absolute left-0 top-0 w-full bg-green-400 opacity-10 dark:bg-green-500 dark:opacity-15;
+    @apply pointer-events-none absolute top-0 left-0 w-full bg-green-400 opacity-10 dark:bg-green-500 dark:opacity-15;
     z-index: -1; /* Required for data-highlight to render behind code */
   }
 
@@ -451,7 +453,7 @@
 
   & table th {
     @apply sticky top-0 w-full bg-transparent text-sm font-semibold text-gray-700 dark:text-gray-300;
-    @apply border-0 border-b border-gray-200 p-0 pb-1 pr-4 dark:border-gray-800;
+    @apply border-0 border-b border-gray-200 p-0 pr-4 pb-1 dark:border-gray-800;
   }
 
   & table tbody {
@@ -459,7 +461,7 @@
   }
 
   & table td {
-    @apply w-full whitespace-nowrap border-0 border-b border-gray-100 p-0 py-2 pr-4 text-sm text-black dark:border-gray-800 dark:text-white;
+    @apply w-full border-0 border-b border-gray-100 p-0 py-2 pr-4 text-sm whitespace-nowrap text-black dark:border-gray-800 dark:text-white;
   }
 
   /*****************************************************************************/
@@ -469,7 +471,7 @@
   & docs-success,
   & docs-warning,
   & docs-error {
-    @apply relative mb-3 mt-0 block rounded-lg border-l-2 border-r-2 border-current px-4 py-2;
+    @apply relative mt-0 mb-3 block rounded-lg border-r-2 border-l-2 border-current px-4 py-2;
   }
 
   & docs-info::before,
@@ -540,7 +542,7 @@
   }
 
   & docs-card {
-    @apply block h-full w-full rounded-lg border-[3px] border-gray-50 p-4 hover:border-gray-100 dark:border-gray-700 hover:dark:border-gray-600 sm:p-6;
+    @apply block h-full w-full rounded-lg border-[3px] border-gray-50 p-4 hover:border-gray-100 sm:p-6 dark:border-gray-700 hover:dark:border-gray-600;
 
     & > :first-child {
       @apply mt-0;
@@ -555,7 +557,7 @@
   /* blockquotes */
 
   & blockquote {
-    @apply mx-0 mb-4 mt-0 border-l-4 border-gray-200 p-0 pl-4 text-gray-600 dark:border-gray-800 dark:text-gray-400;
+    @apply mx-0 mt-0 mb-4 border-l-4 border-gray-200 p-0 pl-4 text-gray-600 dark:border-gray-800 dark:text-gray-400;
   }
 
   & blockquote > :first-child {
@@ -576,6 +578,6 @@
 
 .md-toc {
   & :where(li code) {
-    @apply rounded-sm bg-gray-100/50 px-1.5 pb-0.5 pt-px text-xs text-gray-600 group-hover:text-gray-100 dark:bg-gray-800/50 dark:text-gray-300;
+    @apply rounded-sm bg-gray-100/50 px-1.5 pt-px pb-0.5 text-xs text-gray-600 group-hover:text-gray-100 dark:bg-gray-800/50 dark:text-gray-300;
   }
 }

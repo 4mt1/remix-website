@@ -1,3 +1,5 @@
+@reference './tailwind.css';
+
 :root {
   --base00: theme("colors.gray.50");
   --base01: theme("colors.gray.200");
@@ -63,11 +65,11 @@
   }
 
   & h2 {
-    @apply text-2xl font-bold dark:text-gray-200 md:text-3xl;
+    @apply text-2xl font-bold md:text-3xl dark:text-gray-200;
   }
 
   & h3 {
-    @apply text-xl font-bold dark:text-gray-200 md:text-2xl;
+    @apply text-xl font-bold md:text-2xl dark:text-gray-200;
   }
 
   & h4,
@@ -95,7 +97,7 @@
   & kbd,
   & pre {
     word-wrap: normal;
-    @apply overflow-auto rounded-lg border border-gray-100 p-3 text-sm leading-none dark:border-gray-900 md:p-4;
+    @apply overflow-auto rounded-lg border border-gray-100 p-3 text-sm leading-none md:p-4 dark:border-gray-900;
   }
 
   & pre {
@@ -113,7 +115,7 @@
   }
 
   & pre > code {
-    @apply m-0 whitespace-pre break-normal border-0 bg-transparent p-0;
+    @apply m-0 border-0 bg-transparent p-0 break-normal whitespace-pre;
   }
 
   & .codeblock-line {
@@ -121,7 +123,7 @@
   }
 
   & :not(pre) > code {
-    @apply rounded bg-gray-100/50 px-1.5 pb-0.5 pt-px text-sm text-gray-700 dark:bg-gray-800/50;
+    @apply rounded bg-gray-100/50 px-1.5 pt-px pb-0.5 text-sm text-gray-700 dark:bg-gray-800/50;
   }
 
   & code {
@@ -225,7 +227,7 @@
   }
 
   & dl {
-    @apply mb-4 mt-0 p-0;
+    @apply mt-0 mb-4 p-0;
 
     & dt {
       @apply mt-4 p-0 text-base font-semibold italic;
@@ -260,7 +262,7 @@
 
   & table th {
     @apply sticky top-0 bg-transparent text-sm font-semibold text-gray-700 dark:text-gray-300;
-    @apply border-0 border-b border-gray-200 p-0 pb-1 pr-4 dark:border-gray-800 md:pr-6;
+    @apply border-0 border-b border-gray-200 p-0 pr-4 pb-1 md:pr-6 dark:border-gray-800;
   }
 
   & table tbody {
@@ -268,7 +270,7 @@
   }
 
   & table td {
-    @apply whitespace-nowrap border-0 border-b border-gray-100 p-0 py-2 pr-4 text-sm text-black dark:text-white md:pr-6;
+    @apply border-0 border-b border-gray-100 p-0 py-2 pr-4 text-sm whitespace-nowrap text-black md:pr-6 dark:text-white;
   }
 
   & [data-code-block] {
@@ -281,7 +283,7 @@
 
   & .codeblock-line[data-highlight="true"]::after {
     content: " ";
-    @apply pointer-events-none absolute left-0 right-0 top-0 -mx-3 bg-green-400 opacity-10 dark:bg-green-500 dark:opacity-15;
+    @apply pointer-events-none absolute top-0 right-0 left-0 -mx-3 bg-green-400 opacity-10 dark:bg-green-500 dark:opacity-15;
     z-index: -1; /* Required for data-highlight to render behind code */
   }
 
@@ -291,7 +293,7 @@
     scroll-margin-top: 1em;
 
     & a {
-      @apply absolute -left-6 -right-0 top-0 z-10 flex h-full items-center leading-none;
+      @apply absolute top-0 -right-0 -left-6 z-10 flex h-full items-center leading-none;
     }
 
     &:hover a,
@@ -300,7 +302,7 @@
     }
 
     & .icon-link {
-      @apply flex h-full items-center align-middle text-blue-brand;
+      @apply text-blue-brand flex h-full items-center align-middle;
     }
 
     & a .icon-link::before {

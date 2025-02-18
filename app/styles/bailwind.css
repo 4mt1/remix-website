@@ -1,3 +1,5 @@
+@reference './tailwind.css';
+
 /* When you bail on tailwind, start the className with __ so that they are easy to identify in the HTML as escape hatches, we don't want very many of these! */
 
 .__carousel {

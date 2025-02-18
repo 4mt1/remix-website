@@ -1,3 +1,5 @@
+@reference '../../tailwind.css';
+
 .__hero {
   --bg-img-light: url(https://res.cloudinary.com/remix-run/image/upload/v1676950297/remix.run/conf-2023/conf-2023-light.png);
   --bg-img-twinkle: url(https://res.cloudinary.com/remix-run/image/upload/v1676950297/remix.run/conf-2023/conf-2023-twinkle.png);

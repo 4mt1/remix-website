@@ -1,3 +1,5 @@
+@reference './tailwind.css';
+
 /*
 CSS Variables used in this file:
 --parallax-transform-percent: Controls how much elements move during parallax scrolling (0-1).
@@ -37,7 +39,7 @@ html {
   max-width: 1400px;
   width: 85%;
   padding-bottom: 200px;
-  @apply mx-auto pb-0 pt-0;
+  @apply mx-auto pt-0 pb-0;
 }
 
 .seats-container {
@@ -312,7 +314,7 @@ html {
 @media (min-width: 120rem /* 1920px */) {
   .letter-of-intent-container {
     width: 60%;
-    @apply pb-0 pt-0;
+    @apply pt-0 pb-0;
   }
 
   .letter-of-intent h2 {

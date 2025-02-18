@@ -1,3 +1,5 @@
+@reference './tailwind.css';
+
 [data-reach-tabs][data-orientation="vertical"] {
   display: flex;
 }
